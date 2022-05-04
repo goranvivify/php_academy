@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predavanje 6</title>
+</head>
+<body>
+    <script src="required.js"></script>
+    <h2>PHP Form Validation</h2>
+    <div style="color: red; margin-left: 3pt; display: inline;">* required field</div>
+<!-- <form name="myForm" method="post" action="/index.php"  onsubmit="required()">   -->
+<form name="myForm" method="post" action="/index.php">  
+  Name: <input type="text" required name="name">
+  <div style="color: red; margin-left: 3pt; display: inline;">*</div> 
+  <?php if ($name == "") {
+    return ?> <div style="color: red; margin-left: 3pt; display: inline;">Name is required</div>
+  <?php
+  }
+  ?>
+  <br><br>
+  E-mail: <input type="text" required name="email">
+  <div style="color: red; margin-left: 3pt; display: inline;">*</div>
+  <br><br>
+  Website: <input type="text" name="website">
+  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male" style="display: inline;">Male
+  <div style="color: red; margin-left: 3pt; display: inline;">*</div>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+</body>
+</html>
